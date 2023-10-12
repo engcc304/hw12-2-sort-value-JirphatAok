@@ -90,14 +90,24 @@ int main() {
     }
     for (int i = 0; i < 4; i++) {
         printf("%s", S[i].Name1);
-        printf( " " );
+        if (i < 4) {
+            printf( " " ) ;
+        }
     }
     printf("\n");
     for (int i = 0; i < 4; i++) {
         printf("%.2f", S[i].number);
-        printf( " " );
+        if (i < 4) {
+            printf( " " ) ;
+        }
     }
     printf("\n");
 
     return 0;
 }
+Expected:
+Alice Violet Omen Yorn
+80.75 67.76 56.00 21.42
+Actual:
+Alice Violet Omen Yorn 
+80.75 67.76 56.00 21.42
