@@ -79,6 +79,15 @@ int main() {
         printf("Score: ");
         scanf("%f", &S[i].number);
     }
+     for (int i = 0; i < 4; i++) {
+        for (int j = i + 1; j < 4; j++) {
+            if (S[i].number < S[j].number) {
+                struct Score temp = S[i];
+                S[i] = S[j];
+                S[j] = temp;
+            }
+        }
+    }
     for (int i = 0; i < 4; i++) {
         printf("%s ", S[i].Name1);
     }
