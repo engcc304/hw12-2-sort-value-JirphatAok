@@ -60,3 +60,33 @@
         99.99 88.88 77.77 66.66
 
 */
+#include <stdio.h> 
+#include <string.h>
+
+struct Score {
+    char Name1[20];
+    float number; 
+};
+
+int main() {
+    struct Score S[4];
+    
+    for (int i = 0; i < 4; i++) {
+        char personChar = 'A' + i; 
+        printf("Student %c\n", personChar);
+        printf("Name: ");
+        scanf("%s", S[i].Name1);
+        printf("Score: ");
+        scanf("%f", &S[i].number);
+    }
+    for (int i = 0; i < 4; i++) {
+        printf("%s ", S[i].Name1);
+    }
+    printf("\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%.2f ", S[i].number);
+    }
+    printf("\n");
+
+    return 0;
+}
