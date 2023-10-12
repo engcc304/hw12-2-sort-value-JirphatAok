@@ -89,11 +89,11 @@ int main() {
         }
     }
     for (int i = 0; i < 4; i++) {
-        printf("%s ", S[i].Name1);
+        printf(" %s", S[i].Name1);
     }
     printf("\n");
     for (int i = 0; i < 4; i++) {
-        printf("%.2f ", S[i].number);
+        printf(" %.2f", S[i].number);
     }
     printf("\n");
 
