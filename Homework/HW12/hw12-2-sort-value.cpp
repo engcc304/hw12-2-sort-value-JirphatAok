@@ -89,7 +89,8 @@ int main() {
         }
     }
     for (int i = 0; i < 4; i++) {
-        printf(" %s", S[i].Name1);
+        printf("%s", S[i].Name1);
+        printf( " " );
     }
     printf("\n");
     for (int i = 0; i < 4; i++) {
