@@ -93,7 +93,8 @@ int main() {
     }
     printf("\n");
     for (int i = 0; i < 4; i++) {
-        printf(" %.2f", S[i].number);
+        printf("%.2f", S[i].number);
+        printf( " " );
     }
     printf("\n");
 
