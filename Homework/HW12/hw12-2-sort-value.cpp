@@ -60,3 +60,54 @@
         99.99 88.88 77.77 66.66
 
 */
+#include <stdio.h> 
+#include <string.h>
+
+struct Score {
+    char Name1[20];
+    float number; 
+};
+
+int main() {
+    struct Score S[4];
+    
+    for (int i = 0; i < 4; i++) {
+        char personChar = 'A' + i; 
+        printf("Student %c\n", personChar);
+        printf("Name: ");
+        scanf("%s", S[i].Name1);
+        printf("Score: ");
+        scanf("%f", &S[i].number);
+    }
+     for (int i = 0; i < 4; i++) {
+        for (int j = i + 1; j < 4; j++) {
+            if (S[i].number < S[j].number) {
+                struct Score temp = S[i];
+                S[i] = S[j];
+                S[j] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < 4; i++) {
+        printf("%s", S[i].Name1);
+        if (i < 4) {
+            printf( " " ) ;
+        }
+    }
+    printf("\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%.2f", S[i].number);
+        if (i < 3) {
+            printf( " " ) ;
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
+Expected:
+Alice Violet Omen Yorn
+80.75 67.76 56.00 21.42
+Actual:
+Alice Violet Omen Yorn 
+80.75 67.76 56.00 21.42
