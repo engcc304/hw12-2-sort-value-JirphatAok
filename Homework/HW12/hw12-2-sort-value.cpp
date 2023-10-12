@@ -97,7 +97,7 @@ int main() {
     printf("\n");
     for (int i = 0; i < 4; i++) {
         printf("%.2f", S[i].number);
-        if (i < 4) {
+        if (i < 3) {
             printf( " " ) ;
         }
     }
